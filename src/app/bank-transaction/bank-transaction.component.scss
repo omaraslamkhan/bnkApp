@@ -1,0 +1,169 @@
+i {
+    color: inherit;
+
+    &.menu-icon {
+      font-size:12;
+      line-height: 1;
+      margin-left: auto;
+      .rtl & {
+        margin-left: 0;
+        margin-right: auto;
+      }
+      color: #b684ff;
+      &:before {
+        vertical-align: middle;
+      }
+    }
+
+    &.menu-arrow {
+      font: normal normal normal 24px/1 "Material Design Icons";
+      line-height: 1;
+      font-size: 12;
+      margin-left: auto;
+      .rtl & {
+        margin-left: 0;
+        margin-right: auto;
+      }
+      color:#b684ff;
+      &:before{
+        content: "\f0141";
+        font-size: inherit;
+        color: inherit;
+      }
+      + .menu-icon {
+        margin-left: .25rem;
+        margin-bottom: .25rem;
+        .rtl & {
+          margin-left: 0;
+          margin-right: .25rem;
+        }
+      }
+    }
+  }
+
+  .menu-title {
+    color: inherit;
+    display: inline-block;
+    font-size:12;
+    line-height: 1;
+    vertical-align: middle;
+  }
+
+  @import '../../styles.scss';
+
+.rounded-legend {
+  ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    li {
+      list-style-type: none;
+      color: $text-muted;
+      font-size: .75rem;
+      .legend-dots {
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-right: .5rem;
+        .rtl & {
+          margin-left: .5rem;
+        }
+      }
+    }
+  }
+  &.legend-horizontal {
+    @include display-flex;
+    ul {
+      li {
+        display: inline-block;
+        margin-right: 1.5rem;
+        .rtl & {
+          margin-right: auto;
+          margin-left: 1.5rem;
+        }
+      }
+    }
+  }
+  &.legend-vertical {
+    ul {
+      li {
+        margin-top: 1rem;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+#visit-sale-chart-legend {
+  ul {
+    li {
+      &:nth-child(1) {
+        .legend-dots {
+          background: linear-gradient(to right, rgba(218, 140, 255, 1), rgba(154, 85, 255, 1));
+        }
+      }
+      &:nth-child(2) {
+        .legend-dots {
+          background: linear-gradient(to right, rgba(255, 191, 150, 1), rgba(254, 112, 150, 1));
+        }
+      }
+      &:nth-child(3) {
+        .legend-dots {
+          background:linear-gradient(to right, rgba(54, 215, 232, 1), rgba(177, 148, 250, 1))
+        }
+      }
+    }
+  }
+}
+
+#traffic-chart-legend {
+  ul {
+    li {
+      &:nth-child(1) {
+        .legend-dots {
+          background:linear-gradient(to right, rgba(54, 215, 232, 1), rgba(177, 148, 250, 1))
+        }
+      }
+      &:nth-child(2) {
+        .legend-dots {
+          background:linear-gradient(to right, rgba(6, 185, 157, 1), rgba(132, 217, 210, 1));
+        }
+      }
+      &:nth-child(3) {
+        .legend-dots {
+          background:linear-gradient(to right, rgba(255, 191, 150, 1), rgba(254, 112, 150, 1));
+        }
+      }
+    }
+  }
+}
+
+
+
+.modal-wide {
+  max-width: 800px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the modal horizontally */
+}
+.modal-body {
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+.card-title {
+  font-size: 16px; /* Adjust the font size of card titles */
+}
+
+.list-group-item {
+  font-size: 14px; /* Adjust the font size of list items */
+}
+.link-button {
+    background: none;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+}

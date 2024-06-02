@@ -1,0 +1,97 @@
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title"><i class="mdi mdi-crosshairs-gps menu-icon mr-2"></i>Customers</h4>
+
+        <!-- <p class="card-description">
+          Add class <code>.table-hover</code>
+        </p> -->
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Product</th>
+                <th>Sale</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Loop through the data array and generate table rows dynamically -->
+              <tr *ngFor="let item of tableData">
+                <td>{{ item.user }}</td>
+                <td>{{ item.product }}</td>
+                <td [ngClass]="{'text-danger': item.sale < 50, 'text-success': item.sale >= 50}">
+                  {{ item.sale }}% <i [ngClass]="{'mdi mdi-arrow-down': item.sale < 50, 'mdi mdi-arrow-up': item.sale >= 50}"></i>
+                </td>
+                <td><label [ngClass]="{
+                  'badge badge-danger': item.status === 'Pending',
+                  'badge badge-warning': item.status === 'In progress',
+                  'badge badge-info': item.status === 'Fixed',
+                  'badge badge-success': item.status === 'Completed'
+                }">{{ item.status }}</label></td>
+                <td> 
+                   <button style="text-decoration: none;border:none;background: none;"> <i class="mdi mdi-pencil "></i> </button>
+                   <button style="text-decoration: none;border:none;background: none">  <i class="mdi mdi-eye pr-1 pl-1"></i>  </button>
+                    <button (click)="deleteItem(item.itemId)" style="text-decoration: none;border:none;background: none">  <i class="mdi mdi-delete"></i>  </button>
+
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+
+       
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-12 grid-margin stretch-card mt-3">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">User ADD</h4>
+    
+        <form class="form-inline">
+          <label >Username</label>
+         
+          <input  [ngModelOptions]="{ standalone: true }"  type="text" [(ngModel)]="name" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="User name">
+      
+          <label >Product</label>
+          <div class="input-group mb-2 mr-sm-2">
+            <div class="col-sm-12">
+
+              <select [ngModelOptions]="{ standalone: true }"  [(ngModel)]="product" class="form-control">
+                <option>product 1</option>
+                <option>product 2</option>
+                <option>product 3</option>
+                <option>product 4</option>
+                <option>product 5</option>
+
+              </select>
+            </div>
+            <!-- <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username"> -->
+          </div>
+          <label >Status</label>
+          <div class="input-group mb-2 mr-sm-2">
+            <div class="col-sm-12">
+              <select [ngModelOptions]="{ standalone: true }" [(ngModel)]="status" class="form-control">
+                <option>Pending</option>
+                <option>Completed</option>
+                <option>In Progress</option>
+               
+              </select>
+            </div>
+            <!-- <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username"> -->
+          </div>
+        
+          
+          <button (click)="addItem()" type="submit" class="btn btn-gradient-primary mb-2">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
