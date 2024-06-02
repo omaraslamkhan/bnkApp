@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
 
 
   login() {
-    console.log(this.exampleInputEmail1 )
     this.router.navigate(['/dashboard']); // Adjust the URL as necessary
 
     // Perform authentication logic here

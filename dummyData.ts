@@ -4,11 +4,11 @@ export const loginData = {
   };
 
  export const tableData = [
-    {id:1, user: 'Jacob', product: 'Photoshop', sale: 28.76, status: 'Pending' },
-    { id:2,user: 'Messsy', product: 'Flash', sale: 21.06, status: 'In progress' },
-    { id:3,user: 'John', product: 'Premier', sale: 35.00, status: 'Fixed' },
-    { id:4,user: 'Peter', product: 'After effects', sale: 82.00, status: 'Completed' },
-    { id:5,user: 'Dave', product: '53275535', sale: 98.05, status: 'In progress' }
+    {id:1, user: 'Asif', product: 'Photoshop', sale: 28.76, status: 'Pending' },
+    { id:2,user: 'Umer', product: 'Flash', sale: 21.06, status: 'In progress' },
+    { id:3,user: 'Zohair', product: 'Premier', sale: 35.00, status: 'Fixed' },
+    { id:4,user: 'Ali', product: 'After effects', sale: 82.00, status: 'Completed' },
+    { id:5,user: 'Aslam', product: '53275535', sale: 98.05, status: 'In progress' }
   ];
 
   export const itemstableData = [
@@ -21,19 +21,19 @@ export const loginData = {
 
   
   export const TransactiontableData = [
-    { trid: '1', deal: 'Deal A', customer: 'Jacob',  bankName: 'Bank A',date:'12/2/2024' },
-    { trid: '2', deal: 'Deal B', customer: 'Messsy', bankName: 'Bank A',date:'12/1/2021' },
-    { trid: '3', deal: 'Deal C', customer: 'John', bankName: 'Bank A' ,date:'1/22/2020'},
-    { trid: '4', deal: 'Deal D', customer:'Peter', bankName: 'Bank A',date:'4/7/2024' },
-    { trid: '5', deal: 'Deal E', customer:'Dave', bankName: 'Bank A',date:'6/3/2024' }
+    { trid: '1', deal: 'Deal A', customer: 'Umer',  bankName: 'Bank A',date:'12/2/2024' },
+    { trid: '2', deal: 'Deal B', customer: 'Ali', bankName: 'Bank A',date:'12/1/2021' },
+    { trid: '3', deal: 'Deal C', customer: 'Asif', bankName: 'Bank A' ,date:'1/22/2020'},
+    { trid: '4', deal: 'Deal D', customer:'Ahmed', bankName: 'Bank A',date:'4/7/2024' },
+    { trid: '5', deal: 'Deal E', customer:'Sarfaraz', bankName: 'Bank A',date:'6/3/2024' }
   ];
 
   export const InvTableData = [
-    { invId: '1', invName: 'item A',customer:'Dave',date:'12/2/2024' },
-    { invId: '2', invName: 'item B', customer:'Peter',date:'12/1/2021' },
-    { invId: '3', invName: 'item C', customer: 'John',date:'1/22/2020'},
-    { invId: '4', invName: 'item D',customer: 'Messsy',date:'4/7/2024' },
-    { invId: '5', invName: 'item E', customer: 'Jacob',date:'6/3/2024' }
+    { invId: '1', invName: 'item A',customer:'Zohaib',date:'12/2/2024' },
+    { invId: '2', invName: 'item B', customer:'Nasir',date:'12/1/2021' },
+    { invId: '3', invName: 'item C', customer: 'Iqbal',date:'1/22/2020'},
+    { invId: '4', invName: 'item D',customer: 'Junaid',date:'4/7/2024' },
+    { invId: '5', invName: 'item E', customer: 'Haris',date:'6/3/2024' }
   ];
 
   export const ExpableData = [
