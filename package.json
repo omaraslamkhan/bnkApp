@@ -3,6 +3,7 @@
   "version": "4.0.0",
   "scripts": {
     "ng": "ng",
+    "live":"ng b --output-path docs --base-href /bnkApp/",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
