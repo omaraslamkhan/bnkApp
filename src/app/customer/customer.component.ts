@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { tableData } from 'dummyData';
 
 @Component({
@@ -12,10 +13,15 @@ export class CustomerComponent implements OnInit {
   name:"";
   status:"";
   product:"";
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }
+
+  openMediumModal( mediumModalContent ) {
+    this.modalService.open( mediumModalContent );
+  }
+
   addItem(): void {
     
     if (this.name && this.status !== null) {

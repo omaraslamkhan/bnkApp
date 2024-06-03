@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { itemstableData } from 'dummyData';
 
 @Component({
@@ -11,11 +12,13 @@ export class ItemsComponent implements OnInit {
   name: string | null = null; // Initialize with null instead of ""
   price: number | null = null; // Initialize with null instead of 0
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
   }
-
+  openMediumModal( mediumModalContent ) {
+    this.modalService.open( mediumModalContent );
+  }
   addItem(): void {
     if (this.name && this.price !== null) {
       const newItem = {

@@ -18,6 +18,9 @@ export class BankTransactionComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openMediumModalbs( mediumModalContent ) {
+    this.modalService.open( mediumModalContent );
+  }
   
   addItem(): void {
     if (this.name && this.customer !== null) {

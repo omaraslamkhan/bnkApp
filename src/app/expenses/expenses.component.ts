@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ExpableData } from 'dummyData';
 
 @Component({
@@ -13,9 +14,13 @@ export class ExpensesComponent implements OnInit {
   date: string | null = null; // Initialize with null instead of ""
   status: string | null = null; // Initialize with null instead of ""
 
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
 
   ngOnInit(): void {
+  }
+
+  openMediumModal( mediumModalContent ) {
+    this.modalService.open( mediumModalContent );
   }
 
   addItem(): void {
